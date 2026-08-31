@@ -1,9 +1,12 @@
 .venv/
+.git/
 __pycache__/
-*.pyc
+*.pyc/
 .DS_Store
 
 data/
 outputs/
 models/
+
+
 
