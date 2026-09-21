@@ -1,8 +1,8 @@
-import cv2 as cv
+import cv2
 import numpy as np
 
 def resize_image(image, width=128, height=128):
-    return cv.resize(image, (width, height))
+    return cv2.resize(image, (width, height))
 
 
 def adjust_brightness(image, value=40):
@@ -16,7 +16,7 @@ def adjust_brightness(image, value=40):
 
 
 def blur_image(image, kernel_size=7):
-    return cv.GaussianBlur(
+    return cv2.GaussianBlur(
         image,
         (kernel_size, kernel_size),
         0
@@ -76,7 +76,7 @@ def simulate_turbidity(
     result = result.astype(np.uint8)
 
     # 4. Slightly blur the image
-    result = cv.GaussianBlur(
+    result = cv2.GaussianBlur(
         result,
         (blur_amount, blur_amount),
         0
